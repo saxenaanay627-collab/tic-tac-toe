@@ -21,5 +21,8 @@ int checkwin(){
         printf("%c wins",arr[1][1]);
         return 1;
     }
+    else{
+        printf("draw");
+    }
     return 0;
 }
