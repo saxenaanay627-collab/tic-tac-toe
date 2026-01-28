@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include"checkwin.h"
 
 void display(char board[3][3]){
    
@@ -28,6 +29,8 @@ int main(){
     int valid =0;
     display(board);
     char Player1,Player2;
+   
+    while(1){
         while(valid!=1){
         printf("Place your EX (Player 1): ");
         scanf(" %c",&Player1);
