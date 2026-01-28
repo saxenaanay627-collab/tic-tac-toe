@@ -1,28 +1,19 @@
-#include<stdio.h>
-char arr[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
-int checkwin(){
+#include <stdio.h>
+#include "checkwin.h"
+
+int checkwin(char board[3][3]) {
     for(int i=0;i<3;i++){
-        if(arr[i][0]==arr[i][1]&&arr[i][1]==arr[i][2]){
-            printf("%c wins",arr[i][0]);
+        if(board[i][0]==board[i][1] && board[i][1]==board[i][2])
             return 1;
-        }
-    }
-    for(int i=0;i<3;i++){
-        if(arr[0][i]==arr[1][i]&&arr[1][i]==arr[2][i]){
-            printf("%c wins",arr[0][i]);
+        if(board[0][i]==board[1][i] && board[1][i]==board[2][i])
             return 1;
-        }
     }
-    if(arr[0][0]==arr[1][1]&&arr[1][1]==arr[2][2]){
-        printf("%c wins",arr[0][0]);
+
+    if(board[0][0]==board[1][1] && board[1][1]==board[2][2])
         return 1;
-    }
-    if(arr[0][2]==arr[1][1]&&arr[1][1]==arr[2][0]){
-        printf("%c wins",arr[1][1]);
+
+    if(board[0][2]==board[1][1] && board[1][1]==board[2][0])
         return 1;
-    }
-    else{
-        printf("draw");
-    }
+
     return 0;
 }
