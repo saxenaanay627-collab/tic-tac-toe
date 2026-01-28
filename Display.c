@@ -28,8 +28,6 @@ int main(){
     int valid =0;
     display(board);
     char Player1,Player2;
-
-    do{
         while(valid!=1){
         printf("Place your EX (Player 1): ");
         scanf(" %c",&Player1);
@@ -62,7 +60,4 @@ int main(){
         }   
         display(board);
     }
-
-    return 0;
-}
 }
