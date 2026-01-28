@@ -47,6 +47,7 @@ int main(){
            
         display(board);
         }
+        valid=0;
         //Player 2
         while(valid!=1){
         printf("Place your O (Player 2): ");
